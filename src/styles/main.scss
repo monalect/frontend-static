@@ -1,0 +1,94 @@
+@use '../sass/base/reset';
+@use '../sass/base/typography' as *;
+@use '../sass/base/color' as *;
+@use '../sass/components/header';
+
+body {
+	font-family: $plex-sans;	
+	max-width: 100vw;
+	min-height: 100vh;
+	background: linear-gradient(180deg, #B7C7F3 1.12%, #FDF7EC 100%);	
+	background-attachment: fixed;
+	color: $monablue-0;
+}
+
+main {
+	padding-top: 32px;
+	min-height: calc(100vh - 64px);
+}
+
+.title{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 96px;
+	min-height: 500px;
+	align-items: center;
+}
+
+.title_text {
+	font-family: $plex-serif;
+	margin-bottom: 32px;
+}
+
+.title_text > h1 {
+	margin-bottom: 32px;
+}
+
+.title_text > h4 {
+	font-style: italic;	
+	color: $monablue-1;
+	text-align: center;
+}
+
+h1 {
+	font-weight: 500;
+	font-size: 118px;
+}
+
+h3 {
+	font-size: 34px;
+}
+
+h4 {
+	font-size: 28px;
+}
+
+article {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	gap: 64px;
+	margin-bottom: 96px; 
+}
+
+.landing_description {
+	font-weight: 300;
+	width: 80vw;
+}
+
+footer {
+	display: flex;
+	flex-direction: row;	
+	justify-content: center;
+	align-items: center;
+}
+
+footer p {
+	padding-bottom: 16px;
+}
+
+footer a {
+	text-decoration:  underline;
+}
+
+footer a:hover{
+	color: $monablue-1;
+}
+#monalect_logo {
+	width: 200px;
+	height: auto;
+}
+
