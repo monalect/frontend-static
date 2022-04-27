@@ -27,7 +27,7 @@ function Main()
 				</section>
 				<article>
 					<h4 class="landing_description">Monalect is a self-learning management system meant to provide efficiency, structure, and self-direction to your learning experience.</h4>
-					<h3> Coming soon </h3>
+					<h4> Coming soon </h4>
 				</article>
 			</main>
 			<footer>
