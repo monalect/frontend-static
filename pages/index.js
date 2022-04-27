@@ -2,9 +2,7 @@ import {
 	Header,
 	HeaderMenu,
 	HeaderLink
-} from "/src/components/";
-
-import Image from 'next/image';
+} from "/components/";
 
 function Main()
 {
