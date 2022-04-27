@@ -64,9 +64,10 @@ article {
 	margin-bottom: 96px; 
 }
 
-.landing_description {
+article > h4 {
+	max-width: 900px;
+	font-size: 24px;
 	font-weight: 300;
-	width: 80vw;
 }
 
 footer {
@@ -87,6 +88,7 @@ footer a {
 footer a:hover{
 	color: $monablue-1;
 }
+
 #monalect_logo {
 	width: 200px;
 	height: auto;
