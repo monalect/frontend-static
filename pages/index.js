@@ -7,11 +7,11 @@ import {
 function Main()
 {
 	return (
-		<div>
+		<div id="landing" class="root">
 			<Header> 
 				<HeaderMenu>
-					<HeaderLink href="#" active={true}>Home</HeaderLink>
-					<HeaderLink href="#">Blog</HeaderLink>
+					<HeaderLink href="/" active={true}>Home</HeaderLink>
+					<HeaderLink href="/blog">Blog</HeaderLink>
 					<HeaderLink href="#">Plans</HeaderLink>
 					<HeaderLink href="#">About</HeaderLink>
 				</HeaderMenu>
