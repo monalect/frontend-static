@@ -10,8 +10,8 @@ export default function MainHeader ({slug}) {
 			<HeaderMenu>
 				<HeaderLink href="/" active={slug === "/" }>Home</HeaderLink>
 				<HeaderLink href="/blog" active={slug === "/blog"} >Blog</HeaderLink>
-				<HeaderLink href="#">Plans</HeaderLink>
-				<HeaderLink href="#">About</HeaderLink>
+				<HeaderLink href="/vision" active={slug === "/vision"}>Vision</HeaderLink>
+				<HeaderLink href="/about" active={slug === "/about"}>About</HeaderLink>
 			</HeaderMenu>
 		</Header>
 	);

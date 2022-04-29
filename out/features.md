@@ -10,8 +10,8 @@ Monalect is a user-led self-learning management system meant to provide an envir
 2. **User-centric:** Monalect is user-led. Users create content, and users are the ones that drive value. Thus, Monalect is built to serve the userbase, instead of govern.
 3. **Mature:** Monalect is mature and doesn't infantilize or condescend the users. 
 4. **Invisible:** The user shouldn't have notice Monalect when using it, it's just simply a place. No conflicts, confusions, and surprises with the user experience, essentially.
-5. **Clear and Clean:** The product is clear in what it presents to users. The user should never feel "cluttered", and should always know what to do next.
-6. **Collaborative:** The product tries to enhance user collaboration and socially-driven learning.
+5. **Clear and Clean:** Monalect is clear in what it presents to users. The user should never feel "cluttered", and should always know what to do next.
+6. **Collaborative:** Monalect tries to enhance user collaboration and socially-driven learning.
 
 ### Philosophy & Vision
 
@@ -43,7 +43,7 @@ Lessons are the primary divisions of the course. You split questions and learnin
 
 You can create questions as you study, and assign them to a lesson when you do, but if your course is imported, you likely have questions already pre-created for you. The questions are used to create quizzes and exams. Quizzes are informal and largely for practice and review, while exams are a formal and strict way to measure your knowledge. Exams are done based on lesson selection, and exams determine the marks of your lessons. 
 
-The learning material is the stuff you're learning from. Right now, it's only composed of textbooks or articles. Textbooks are divided into sections that can be assigned to lessons, while articles can't be divided, and are wholly assigned to a lesson. Learning material . You can study that material in the 
+The learning material is the stuff you're learning from. Right now, it's only composed of textbooks and articles. Textbooks are divided into sections that can be assigned to lessons, while articles can't be divided, and are wholly assigned to a lesson. 
 
 Lessons determine how much of the course you completed, with marks received from exams. You're intended to examinate against a lesson once you've finished studying it. 
 
@@ -65,3 +65,6 @@ However, when importing or exporting a course, only the metadata of the learning
 
 For our provided templates we will only have textbooks from the [Open Textbook Library](https://open.umn.edu/opentextbooks), which are all free to download legally. 
 
+### Final Words 
+
+Monalect is meant to be free, simple, and intuitive. We want everyone to be able to learn, and experience learning in a progressive way. Look forward to our launch!
