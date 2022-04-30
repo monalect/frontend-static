@@ -8,8 +8,8 @@ Monalect is a user-led self-learning management system meant to provide an envir
 
 1. **Egalitarian Liberty:** Every user should be free to study what they want with equal ability and accessibility. No user should feel less able to learn, especially due to financial differences.
 2. **User-centric:** Monalect is user-led. Users create content, and users are the ones that drive value. Thus, Monalect is built to serve the userbase, instead of govern.
-3. **Mature:** Monalect is mature and doesn't infantilize or condescend the users. 
-4. **Invisible:** The user shouldn't have notice Monalect when using it, it's just simply a place. No conflicts, confusions, and surprises with the user experience, essentially.
+3. **Mature:** Monalect is mature and doesn't infantilize or condescend its users. 
+4. **Invisible:** The user shouldn't notice Monalect when using it. No conflicts, confusions, and surprises with the user experience, essentially.
 5. **Clear and Clean:** Monalect is clear in what it presents to users. The user should never feel "cluttered", and should always know what to do next.
 6. **Collaborative:** Monalect tries to enhance user collaboration and socially-driven learning.
 
