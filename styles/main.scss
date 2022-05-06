@@ -9,6 +9,14 @@
 @use './blog-post';
 @use './vision';
 
+@use '../design/scss/abstract/color';
+@use '../design/scss/components/button';
+@use '../design/scss/components/modal';
+@use '../design/scss/components/text-input';
+@use '../design/scss/components/password-input';
+@use '../design/scss/components/registration-form';
+@use '../design/scss/base/core';
+
 html {
 	scroll-behavior: smooth;
 	overflow-y: scroll;
@@ -76,4 +84,8 @@ footer a:hover{
 #about {
 	background: linear-gradient(0deg, $monagold-1 15.96%, $monablue-2 100%);
 	background-attachment: fixed;
+}
+
+header {
+	z-index: 1;
 }

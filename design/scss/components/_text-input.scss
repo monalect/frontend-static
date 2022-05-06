@@ -1,0 +1,60 @@
+@use '../abstract/sizing' as *; 
+@use '../abstract/color' as *;
+
+$textbox-width: 20 * $bs;
+
+
+.mn-c-text-input {
+	display: flex;
+	color: $monablue-1;
+	font-size: $bs;
+	flex-direction: column;
+	gap: $bs / 4;
+
+	width: $textbox-width;
+
+	> * {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	span {
+		font-size: $bs - 3px;
+	}
+
+	::placeholder {
+		color: $monablue-2;
+		opacity: 1;
+	}
+
+	input {
+		height: 2 * $bs;
+		//border-width: 1px;
+		//border-style: solid;
+		//border-color: $monablue-2;
+		border-style: none;
+		box-sizing: border-box;
+		padding-left: $bs / 2;
+		user-select: none;
+
+		&:focus {
+			outline: none;
+			border-style: solid;
+			border-color: $monablue-1-5;
+			border-width: 1px;
+		}
+
+		&:focus:invalid {
+			outline: none;
+			border-style: solid;
+			border-color: $monared-0;
+			border-width: 1px;
+		}
+
+	}
+
+	.mn-is-optional	{
+		margin-left: $bs / 2;
+	}
+
+}

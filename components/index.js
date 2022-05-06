@@ -11,3 +11,4 @@ export { default as PostCardMedium } from "./PostCardMedium";
 export { default as PostCardLarge } from "./PostCardLarge";
 
 export { default as Footer} from "./Footer";
+export { default as RegistrationForm} from "./RegistrationForm";

@@ -1,0 +1,13 @@
+// Google Fonts 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,400&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap');
+
+// Font Variables
+$font-sans: 'IBM Plex Sans', sans-serif;
+$font-serif: 'IBM Plex Serif', serif;
+$font-thin: 300;
+$font-normal: 400;
+$font-bold: 500;
+
+body, button{
+	font-family: $font-sans;
+}
