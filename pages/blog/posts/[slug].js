@@ -5,9 +5,8 @@ import {
 } from '/lib/api'
 
 import {
-	Header,
-	HeaderMenu,
-	HeaderLink,
+	MainHeader,
+	Footer
 } from "/components/";
 
 var showdown = require('showdown')
@@ -19,26 +18,25 @@ export default function BlogPost ({post})
 	const blogBody = converter.makeHtml(post.content);
 	var time_min = `${Math.round(post.words/WPM)} min`;
 
+	if (typeof window !== "undefined"){
+		window.addEventListener('scroll', () => {
+		  document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+		}, false); 
+	}
+
 	return (
-		<div id="blog_post" className="root">
-			<Header> 
-				<HeaderMenu>
-					<HeaderLink href="/">Home</HeaderLink>
-					<HeaderLink href="/blog" active={true}>Blog</HeaderLink>
-					<HeaderLink href="#">Plans</HeaderLink>
-					<HeaderLink href="#">About</HeaderLink>
-				</HeaderMenu>
-			</Header>
+		<div id="blog" className="root">
+			<MainHeader slug="/blog" />
 			<main id="post">
-				<div id="post_logo">
+				<div id="banner">
 					<img src="/logo.svg" width={32}/>
-					<h1>monablog</h1>
+					<h1 className="text" >monablog</h1>
 				</div>
 				<div id = "blog_content">
 					<div id="title_card">
-						<div className="title_text">
+						<div className="text">
 							<div className="title_author">
-								<h2 className="post_title">{post.title}</h2>
+								<h2 className="title">{post.title}</h2>
 								<p className="author">by {post.author}</p>
 							</div>
 							<div className="date_time">
@@ -48,13 +46,11 @@ export default function BlogPost ({post})
 						</div>
 						<img src={post.coverImage} width={400} height={240} style={{objectFit: "cover"}} />
 					</div>
-					<div dangerouslySetInnerHTML={{__html: blogBody}} className="post_body">
+					<div dangerouslySetInnerHTML={{__html: blogBody}} id="post_body">
 					</div>
 				</div>
 			</main>
-			<footer>
-				<p> Created by <a href="https://www.github.com/buyayub">Ayub Elwhishi</a></p>
-			</footer>
+			<Footer/>
 		</div>
 	);
 };

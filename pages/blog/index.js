@@ -1,10 +1,7 @@
 import {
-	Header,
-	HeaderMenu,
-	HeaderLink,
+	MainHeader,
+	Footer,
 	PostCardSmall,
-	PostCardMedium,
-	PostCardLarge
 } from "/components/";
 
 import { getAllPosts  } from '/lib/api'
@@ -22,32 +19,23 @@ export default function Blog({allMeta})
 
 	return  (
 		<div id="blog" className="root">
-			<Header> 
-				<HeaderMenu>
-					<HeaderLink href="/">Home</HeaderLink>
-					<HeaderLink href="/blog" active={true}>Blog</HeaderLink>
-					<HeaderLink href="#">Plans</HeaderLink>
-					<HeaderLink href="#">About</HeaderLink>
-				</HeaderMenu>
-			</Header>
+			<MainHeader slug="/blog"/>
 			<main id="blog_index">
-				<div className="blog_logo">
-					<div className="logo">
+				<div id="blog_banner">
+					<div className="title">
 						<img src="/logo.svg" width={48}/>
-						<h1>monablog</h1>
+						<h1 className="text">monablog</h1>
 					</div>
-					<div className="quote">
+					<div className="subtitle">
 						<h5>Education is not preperation for life;</h5>
 						<h5>Education is life itself.</h5>
 					</div>
 				</div>
-				<div className="content">
+				<div className="index">
 					{blogList}
 				</div>
 			</main>
-			<footer>
-				<p> Created by <a href="https://www.github.com/buyayub">Ayub Elwhishi</a></p>
-			</footer>
+			<Footer />
 		</div>
 	)
 }

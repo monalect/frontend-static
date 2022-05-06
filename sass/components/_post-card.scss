@@ -25,3 +25,16 @@
 	flex-direction: row;
 	justify-content: space-between;
 }
+
+.mn__post_card.mn__small {
+
+	.mn__time {
+		flex-shrink: 0;
+	}
+
+	.mn__date {
+	margin-top: 8px;
+	color: $monablue-1
+	}
+}
+
