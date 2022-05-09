@@ -1,20 +1,33 @@
-@use '../base/color' as *;
+@use '../abstract/color' as *;
+@use '../abstract/sizing' as *;
 
 header {
 	position: fixed;
+
 	top: 0px;
 	width: 100vw;
-	transition: top 0.3s;
+	transition: 0.3s;
 	background: $monablue-2;
+	z-index: 1;
+
+	a {
+	text-decoration: none;
+	color: inherit;
+	}
 
 	.mn-is-right {
+		display: inline;
 		position: absolute;
 		top: 0px;
 		right: 0px;
 	}
 }
 
-.mn__header-menu 
+header + main {
+	padding-top: 32px;
+}
+
+.mn-c-header-menu 
 {
 	display: flex;
 	flex-direction: row;
@@ -24,17 +37,18 @@ header {
 }
 
 
-.mn__header-link a:hover {
+.mn-c-header-link a:hover {
 	color: $monablue-1;
 	transition: 0.1s;
 }
 
-.mn__header-link.active
+.mn-c-header-link.mn-is-active
 {
 	color: $monablue-1;
 }
 
-.mn__header-link.inactive
+.mn-c-header-link.mn-is-inactive
 {
 	color: $monagold-1;
 }
+

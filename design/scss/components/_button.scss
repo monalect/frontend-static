@@ -1,0 +1,66 @@
+@use '../abstract/sizing' as *; 
+@use '../abstract/color' as *;
+
+$medium-button-size: calc(10 * $bs);
+
+.mn-c-button
+{
+	border-radius: 0px;
+	border-width: 0px;
+	border-style: solid;
+	font-size: $bs;
+	box-sizing: border-box;
+	border-collapse: collapse;
+	width: calc(10 * $bs);
+	height: calc(2 * $bs);
+	transition: 0.1s;
+
+	&:hover {
+		cursor: pointer;
+	}
+	
+	&.mn-is-primary {
+		background-color: $monablue-1;
+		color: $monablue-3;
+
+		&:hover {
+			background-color: $monablue-0;
+		}
+	}
+
+
+	&.mn-is-secondary {
+		border-width: 1px;	
+		border-color: $monablue-2;
+		background-color: $monablue-3;
+		color: $monablue-1;
+
+		&:hover {
+			background-color: $monablue-2;
+		}
+	}
+
+	&.mn-is-danger {
+		//border-width: 1px;	
+		color: $monared-n1;
+		//border-color: $monared-n1;
+		background-color: $monared-1;
+
+		&:hover {
+			background-color: $monared-n1;
+			color: $monared-1;
+		}
+	}
+
+
+	&.mn-is-small {
+			width: calc(6 * $bs);
+			height: calc(2 * $bs);
+	}
+
+	&.mn-is-large{
+			width: calc(12 * $bs);
+			height: calc(3 * $bs);
+	}
+}
+

@@ -1,4 +1,4 @@
-function Header ( {children} ) {
+export default function Header ( {children, className, onClick} ) {
 	if (typeof window !== "undefined") {
 
 		var prevScrollpos = window.pageYOffset;
@@ -12,10 +12,8 @@ function Header ( {children} ) {
 	}
 
 	return (
-		<header className="mn__header">
+		<header className= {`mn-c-header ${className}`} onClick={onClick}>
 			{children}
 		</header>
 	)
 }
-
-export default Header;

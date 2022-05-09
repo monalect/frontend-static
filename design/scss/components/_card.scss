@@ -1,0 +1,40 @@
+@use '../abstract/color' as *;
+
+.mn-c-card
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	transition: 0.3s;
+}
+
+.mn-c-card:hover
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: $monablue-3;
+	transition: 0.3s;
+	cursor: pointer;
+	box-shadow: 0px 1px 6px rgba(#000000, 0.2);
+}
+
+.mn-c-card > div
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.mn-c-card.mn-is-small {
+
+	.mn-c-time {
+		flex-shrink: 0;
+	}
+
+	.mn-c-date {
+	margin-top: 8px;
+	color: $monablue-1-5
+	}
+}
+

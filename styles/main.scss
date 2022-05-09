@@ -1,8 +1,18 @@
-@use '../sass/base/reset';
-@use '../sass/base/typography' as *;
-@use '../sass/base/color' as *;
-@use '../sass/components/header';
-@use '../sass/components/post-card';
+@use '../design/scss/base/core';
+@use '../design/scss/base/reset';
+
+@use '../design/scss/abstract/typography' as *;
+@use '../design/scss/abstract/color' as *;
+
+@use '../design/scss/components/button';
+@use '../design/scss/components/modal';
+@use '../design/scss/components/text-input';
+@use '../design/scss/components/password-input';
+@use '../design/scss/components/footer';
+@use '../design/scss/components/header';
+@use '../design/scss/components/card';
+@use '../design/scss/components/text-button-form';
+@use '../design/scss/components/registration-form';
 
 @use './landing';
 @use './blog';
@@ -15,7 +25,7 @@ html {
 }
 
 .root {
-	font-family: $plex-sans;	
+	font-family: $font-sans;	
 	max-width: 100vw;
 	min-height: 100vh;
 	overflow: hidden;
@@ -54,26 +64,12 @@ strong {
 	font-weight: 500;
 }
 
-footer {
-	display: flex;
-	flex-direction: row;	
-	justify-content: center;
-	align-items: center;
-}
-
-footer p {
-	padding-bottom: 16px;
-}
-
-footer a {
-	text-decoration:  underline;
-}
-
-footer a:hover{
-	color: $monablue-1;
-}
 
 #about {
 	background: linear-gradient(0deg, $monagold-1 15.96%, $monablue-2 100%);
 	background-attachment: fixed;
+}
+
+header {
+	z-index: 1;
 }

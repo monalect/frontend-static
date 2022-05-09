@@ -1,7 +1,9 @@
 import {
 	MainHeader,
-	Footer
 } from "/components/";
+import {
+	Footer
+} from "/design/components/"
 import matter from 'gray-matter';
 
 

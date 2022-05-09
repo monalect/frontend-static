@@ -6,8 +6,11 @@ import {
 
 import {
 	MainHeader,
-	Footer
 } from "/components/";
+
+import {
+	Footer
+} from "/design/components/"
 
 var showdown = require('showdown')
 var converter = new showdown.Converter()

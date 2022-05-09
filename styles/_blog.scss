@@ -1,9 +1,10 @@
-@use '../sass/base/color' as *;
-@use '../sass/base/typography' as *;
+@use '../design/scss/abstract/color' as *;
+@use '../design/scss/abstract/typography' as *;
 
 #blog {
 	background: linear-gradient(0deg, $monared-1 15.96%, $monablue-2 100%);
 	background-attachment: fixed;
+	color: $monablue-0;
 }
 
 #blog_index {
@@ -14,7 +15,7 @@
 
 
 #blog_banner {
-	font-family: $plex-serif;
+	font-family: $font-serif;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -36,7 +37,7 @@
 	
 	.subtitle {
 		font-style: italic;
-		color: $monablue-1;
+		color: $monablue-1-5;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -47,7 +48,7 @@
 	background-color: rgba($monablue-3, 0.2);
 	min-width: 720px;
 	max-width: 820px; 
-	font-family: $plex-sans;
+	font-family: $font-sans;
 	font-weight: 300;
 	margin-bottom: 64px;
 
