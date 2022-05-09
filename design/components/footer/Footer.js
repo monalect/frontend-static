@@ -1,7 +1,7 @@
-export default function Footer() {
+export default function Footer({children}) {
 	return (
 		<footer>
-			<p> Created by <a href="https://www.github.com/buyayub">Ayub Elwhishi</a></p>
+			<p><a href="https://www.github.com/buyayub">Created by <span class="mn-is-underlined">Ayub Elwhishi</span></a></p>
 		</footer>
 	);
 };

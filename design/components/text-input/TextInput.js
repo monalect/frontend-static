@@ -14,11 +14,13 @@ export default function TextInput({
 })
 {
 	return (
-		<label className="mn-c-text-input">
-			<div> 
-				{ label } 
-				{ !required ? (<span className="mn-is-optional">(optional)</span>) : ""}
-			</div>
+		<div className="mn-c-text-input" >
+			<label htmlFor={name}>
+				<div> 
+					<span class="mn-c-label">{ label }</span>
+					{ required ? (<span className="mn-is-optional">(optional)</span>) : ""}
+				</div>
+			</label>
 			<input 
 				type= { type }
 				id = { id }  
@@ -31,7 +33,7 @@ export default function TextInput({
 				maxLength={maxlength}
 				pattern={pattern}
 			/>
-			<span>{children}</span>
-		</label>
+			<div className="mn-c-helper-text">{children}</div>
+		</div>
 	);
 }

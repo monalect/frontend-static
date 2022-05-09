@@ -1,19 +1,23 @@
 import {
 	MainHeader,
-	Footer,
-	PostCardSmall,
 } from "/components/";
 
-import { getAllPosts  } from '/lib/api'
+import {
+	Footer,
+	Card
+} from "/design/components/"
+
+import { getAllPosts } from '/lib/api'
 
 export default function Blog({allMeta})
 {
 	const blogList = allMeta.map((post) =>
-		<PostCardSmall
+		<Card
 			title = {post.title}
 			date = {post.date}
 			words= {post.words}
 			slug = {post.slug}
+			key = {post}
 		/>
 	);
 

@@ -1,6 +1,8 @@
 @use '../abstract/sizing' as *; 
 @use '../abstract/color' as *;
 
+$medium-button-size: calc(10 * $bs);
+
 .mn-c-button
 {
 	border-radius: 0px;

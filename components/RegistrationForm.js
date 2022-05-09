@@ -4,10 +4,39 @@ import {
 	Button
 } from '/design/components/'
 
+import { useMutation, gql} from '@apollo/client';
+
 import ReCAPTCHA from "react-google-recaptcha";
 import React from 'react'
+import { useState } from 'react'
 
-export default function RegistrationForm({onSubmit, username, setUsername, password, setPassword, email, setEmail, captcha, setCaptcha}) {
+const REGISTER = gql`
+	mutation ($username: String!, $email: String, $password: String!, $captcha: String!)
+	{ register (
+		username: $username, 
+		email: $email, 
+		password: $password, 
+		captcha: $captcha) {
+			username
+		}
+	}
+`
+export default function RegistrationForm() {
+
+	const [registerUser, {data, loading, error}] = useMutation(REGISTER)
+	const[username, setUsername] = useState("") 	
+	const[password, setPassword] = useState("") 	
+	const[email, setEmail] = useState("") 	
+	const[captcha, setCaptcha] = useState("") 	
+	
+	function onSubmit(event) {
+		registerUser ({ variables: {
+			username: username,
+			email: email,
+			password: password,
+			captcha: captcha
+		}});
+	}
 	return (
 		<form id="mn-c-register" className="mn-c-registration-form" onSubmit={() => {recaptchaRef.current.execute();}}>	
 			<TextInput 

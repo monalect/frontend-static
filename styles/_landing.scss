@@ -1,9 +1,9 @@
-@use '../sass/base/color' as *;
-@use '../sass/base/typography' as *;
+@use '../design/scss/abstract/color' as *;
+@use '../design/scss/abstract/typography' as *;
 
 
 #landing {
-	background: linear-gradient(180deg, $monablue-2 1.12%, $monagold-1 100%);	
+	background: linear-gradient(180deg, $monablue-2 1.12%, $monagold-1 100%) ;
 	background-attachment: fixed;
 }
 
@@ -22,7 +22,7 @@
 	}
 
 	#banner_text {
-		font-family: $plex-serif;
+		font-family: $font-serif;
 		margin-bottom: 32px;
 
 		#banner_title {
@@ -33,7 +33,7 @@
 		
 		#banner_subtitle {
 			font-style: italic;	
-			color: $monablue-1;
+			color: $monablue-1-5;
 			text-align: center;
 		}
 	}
@@ -53,4 +53,9 @@
 		font-size: 24px;
 		font-weight: 300;
 	}
+}
+
+#success_message {
+	color: $monablue-1;
+	font-size: 24px;
 }

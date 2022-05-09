@@ -8,18 +8,21 @@ import { useState } from 'react';
 export default function TextInput({
 		children, 
 		label, 
-		name, 
+		name="password", 
 		id, 
-		placeholder, 
+		placeholder="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{12,}", 
 		required=false,
 		value,
+		pattern,
 		onChange
 })
 {
 	const [show, setShow] = useState(true);
 	return (
-		<label className="mn-c-text-input mn-is-password">
-			{ label }
+		<div className="mn-c-text-input mn-is-password">
+			<label htmlFor={name}>
+					<span className="mn-c-label">{ label }</span>
+			</label>
 			<div className="mn-c-input-box">
 				<input 
 					type = {show ? "password" : "text"}
@@ -28,7 +31,7 @@ export default function TextInput({
 					placeholder = { placeholder }
 					required={ required }
 					minLength={12}
-					pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{12,}"
+					pattern={pattern} 
 					onChange={onChange}
 					value={value}
 				/>
@@ -41,7 +44,7 @@ export default function TextInput({
 					<FiEyeOff className={`mn-c-icon-eye ${!show && "mn-is-hidden"}`}/>
 				</span>
 			</div>
-			<span>{children}</span>
-		</label>
+			<div className="mn-c-helper-text">{children}</div>
+		</div>
 	);
 }

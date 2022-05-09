@@ -1,8 +1,9 @@
 import {
-	MainHeader,
-	Footer
+	MainHeader
 } from "/components/";
-
+import {
+	Footer
+} from "/design/components/";
 
 export default function BlogPost ({content})
 {

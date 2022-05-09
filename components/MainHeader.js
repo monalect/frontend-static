@@ -1,11 +1,8 @@
-import {
+import{
+	Button,
 	Header,
 	HeaderMenu,
 	HeaderLink
-} from "/components/";
-
-import{
-	Button
 } from "/design/components";
 
 export default function MainHeader ({slug, className, children}) {

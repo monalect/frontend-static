@@ -1,4 +1,4 @@
-@use '../base/color' as *;
+@use '../abstract/color' as *;
 
 .mn-c-card
 {
@@ -34,7 +34,7 @@
 
 	.mn-c-date {
 	margin-top: 8px;
-	color: $monablue-1
+	color: $monablue-1-5
 	}
 }
 

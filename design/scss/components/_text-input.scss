@@ -3,22 +3,21 @@
 
 $textbox-width: 20 * $bs;
 
-
 .mn-c-text-input {
 	display: flex;
 	color: $monablue-1;
 	font-size: $bs;
 	flex-direction: column;
 	gap: $bs / 4;
+	align-items: flex-start;
 
-	width: $textbox-width;
 
 	> * {
 		margin: 0px;
 		padding: 0px;
 	}
 
-	span {
+	.mn-c-helper-text {
 		font-size: $bs - 3px;
 	}
 
@@ -27,7 +26,12 @@ $textbox-width: 20 * $bs;
 		opacity: 1;
 	}
 
+	.mn-c-label {
+		font-size: $bs;
+	}
+
 	input {
+		width: $textbox-width;
 		height: 2 * $bs;
 		//border-width: 1px;
 		//border-style: solid;
@@ -35,7 +39,6 @@ $textbox-width: 20 * $bs;
 		border-style: none;
 		box-sizing: border-box;
 		padding-left: $bs / 2;
-		user-select: none;
 
 		&:focus {
 			outline: none;
@@ -55,6 +58,7 @@ $textbox-width: 20 * $bs;
 
 	.mn-is-optional	{
 		margin-left: $bs / 2;
+		font-size: $bs - 3px;
 	}
 
 }
