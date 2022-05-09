@@ -16,7 +16,7 @@ export default function NotifyMe()
 		data.append("email", email)
 		data.append("captcha", captcha)
 
-		fetch('http://localhost:5000/', {
+		fetch('api.monalect.com/email', {
 			method: 'post',
 			body: data})
 		.then(response => { 
