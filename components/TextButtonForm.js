@@ -48,14 +48,11 @@ export default function TextButtonForm({
 			<HCaptcha
 				size="visible"
 				sitekey="01af4af7-bff6-49e1-9167-cdaa93d79544"
-				onVerify={
-				(token, ses) => {
-					captchaRef.current.execute()
-					setCaptcha(token)
-				}}
+				onVerify={setCaptcha}
 				ref={captchaRef}
 			/>
 		</form>
 	);
 }
+//
 

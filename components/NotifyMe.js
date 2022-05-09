@@ -13,6 +13,7 @@ export default function NotifyMe()
 	const captchaRef = useRef(null)
 
 	function onSubmit() {
+		captchaRef.current.execute();
 		const data = new FormData()
 		data.append("email", email)
 		data.append("captcha", captcha)
@@ -51,6 +52,7 @@ export default function NotifyMe()
 					setCaptcha={setCaptcha}
 					onSubmit={onSubmit}
 					onChange={setEmail}
+					captchaRef={captchaRef}
 				/> 
 			<p id="success_message" class={show}>{success}</p>
 		</>
