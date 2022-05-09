@@ -2,7 +2,7 @@ import {
 	TextButtonForm,
 } from "/components/"
 
-import {useState} from "react";
+import {useState, useRef} from "react";
 
 export default function NotifyMe()
 {
@@ -10,6 +10,7 @@ export default function NotifyMe()
 	const [email, setEmail] = useState("")
 	const [success, setSuccess] = useState("")
 	const [show, setShow] = useState("mn-is-fadeout")
+	const captchaRef = useRef(null)
 
 	function onSubmit() {
 		const data = new FormData()

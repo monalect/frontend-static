@@ -1,7 +1,7 @@
 import {Button} from '/design/components'
 import HCaptcha from '@hcaptcha/react-hcaptcha'
 
-export default function TextButtonInput({
+export default function TextButtonForm({
 		children, 
 		label, 
 		name, 
@@ -15,6 +15,7 @@ export default function TextButtonInput({
 		onChange,
 		setCaptcha,
 		pattern,
+		captchaRef,
 		onSubmit,
 		buttonType="primary",
 		buttonText="Button"
@@ -45,9 +46,14 @@ export default function TextButtonInput({
 			</div>
 			<div className="mn-c-helper-text">{children}</div>
 			<HCaptcha
-				size="invisible"
+				size="visible"
 				sitekey="01af4af7-bff6-49e1-9167-cdaa93d79544"
-				onVerify={(value) => setCaptcha(value)}
+				onVerify={
+				(token, ses) => {
+					captchaRef.current.execute()
+					setCaptcha(token)
+				}}
+				ref={captchaRef}
 			/>
 		</form>
 	);
