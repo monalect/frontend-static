@@ -1,5 +1,5 @@
 import {Button} from '/design/components'
-import HCaptcha from '@hcaptcha/react-hcaptcha'
+import ReCAPTCHA from 'react-google-recaptcha';
 
 export default function TextButtonForm({
 		children, 
@@ -42,17 +42,16 @@ export default function TextButtonForm({
 						maxLength={maxlength}
 						pattern={pattern}
 					/>
-				<Button buttonType={buttonType} onClick={onSubmit}>{buttonText}</Button>
+				<Button buttonType={buttonType} onClick={onSubmit}>
+				{buttonText}</Button>
 			</div>
 			<div className="mn-c-helper-text">{children}</div>
-			<HCaptcha
-				size="visible"
-				sitekey="01af4af7-bff6-49e1-9167-cdaa93d79544"
-				onVerify={setCaptcha}
+			<ReCAPTCHA
+				size="invisible"
+				sitekey="6LfDItgfAAAAAL9Yg1cuVDAWo9225dOlfCPoqzgf"
 				ref={captchaRef}
 			/>
 		</form>
 	);
 }
-//
 

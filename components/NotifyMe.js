@@ -12,11 +12,11 @@ export default function NotifyMe()
 	const [show, setShow] = useState("mn-is-fadeout")
 	const captchaRef = useRef(null)
 
-	function onSubmit() {
-		captchaRef.current.execute();
+	async function onSubmit() {
+		const token = await captchaRef.current.executeAsync()
 		const data = new FormData()
 		data.append("email", email)
-		data.append("captcha", captcha)
+		data.append("captcha", token)
 
 		fetch('https://api.monalect.com/email', {
 			method: 'post',
@@ -43,6 +43,7 @@ export default function NotifyMe()
 			}
 		})
 	}
+
 	return (
 		<>
 			<TextButtonForm buttonType="primary"
@@ -50,9 +51,9 @@ export default function NotifyMe()
 					name="email"
 					placeholder="Email Address"
 					setCaptcha={setCaptcha}
+					captchaRef={captchaRef}
 					onSubmit={onSubmit}
 					onChange={setEmail}
-					captchaRef={captchaRef}
 				/> 
 			<p id="success_message" class={show}>{success}</p>
 		</>
