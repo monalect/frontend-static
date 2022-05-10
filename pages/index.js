@@ -19,6 +19,8 @@ import {
 	ApolloProvider,
 } from "@apollo/client";
 
+import Head from 'next/head'
+
 const client = new ApolloClient({
 	uri: 'http://localhost:8000/graphql',
 	cache: new InMemoryCache()
@@ -28,6 +30,10 @@ function Main()
 {
 	return (
 		<div id="landing" className="root">
+			<Head>
+				<title>Monalect - Online Courses You Create</title>
+				<meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+			</Head>
 			<MainHeader slug="/" />
 			<main>
 				<section id ="landing_banner">

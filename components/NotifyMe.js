@@ -4,17 +4,23 @@ import {
 
 import {useState, useRef} from "react";
 
+import {Puff} from "react-loading-icons";
+
 export default function NotifyMe()
 {
 	const [captcha, setCaptcha] = useState("")
 	const [email, setEmail] = useState("")
 	const [success, setSuccess] = useState("")
 	const [show, setShow] = useState("mn-is-fadeout")
+	const [loading, setLoading] = useState(false)
 	const captchaRef = useRef(null)
 
 	async function onSubmit() {
 		const token = await captchaRef.current.executeAsync()
 		const data = new FormData()
+
+		setLoading(true)
+
 		data.append("email", email)
 		data.append("captcha", token)
 
@@ -22,6 +28,7 @@ export default function NotifyMe()
 			method: 'post',
 			body: data})
 		.then(response => { 
+			setLoading(false)
 			if (response.status == 200)
 			{ 
 				return response.json(); 
@@ -42,6 +49,8 @@ export default function NotifyMe()
 				setShow("mn-is-fadein")
 			}
 		})
+
+		captchaRef.current.reset()
 	}
 
 	return (
@@ -55,7 +64,7 @@ export default function NotifyMe()
 					onSubmit={onSubmit}
 					onChange={setEmail}
 				/> 
-			<p id="success_message" class={show}>{success}</p>
+			{loading ? <Puff stroke="#192a61"/> : <p id="success_message" className={show}>{success}</p>}
 		</>
 	)
 }

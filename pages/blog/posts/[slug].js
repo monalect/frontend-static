@@ -12,6 +12,8 @@ import {
 	Footer
 } from "/design/components/"
 
+import Head from 'next/head'
+
 var showdown = require('showdown')
 var converter = new showdown.Converter()
 const WPM = 200;
@@ -29,6 +31,10 @@ export default function BlogPost ({post})
 
 	return (
 		<div id="blog" className="root">
+			<Head>
+				<title>{post.title}</title>
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+			</Head>
 			<MainHeader slug="/blog" />
 			<main id="post">
 				<div id="banner">

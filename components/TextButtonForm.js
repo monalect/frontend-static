@@ -29,7 +29,7 @@ export default function TextButtonForm({
 					{ required ? (<span className="mn-is-optional">(optional)</span>) : ""}
 				</div>
 			</label>
-			<div class="mn-c-text-button">
+			<div className="mn-c-text-button">
 				<input 
 						type= { type }
 						id = { id }  
@@ -54,4 +54,7 @@ export default function TextButtonForm({
 		</form>
 	);
 }
+
+//Test Key: 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
+//Actual Key: 6LfDItgfAAAAAL9Yg1cuVDAWo9225dOlfCPoqzgf
 
