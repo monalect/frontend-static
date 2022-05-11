@@ -52,3 +52,11 @@ header + main {
 	color: $monagold-1;
 }
 
+
+@media screen and (max-width: 500px) {
+	.mn-c-header-menu {
+		font-size: 1.5 * $bs;
+	}
+}
+
+

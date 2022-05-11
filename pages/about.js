@@ -1,5 +1,6 @@
 import {
-	MainHeader
+	MainHeader,
+	Meta
 } from "/components/";
 import {
 	Footer
@@ -9,6 +10,10 @@ export default function BlogPost ({content})
 {
 	return (
 		<div id="about" className="root">
+			<Meta
+				title="About Monalect"
+				description="Contact information for questions and suggestions."
+				/>
 			<MainHeader slug="/about" />
 			<main id="vision_main">
 				<div id="banner">

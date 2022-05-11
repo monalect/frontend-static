@@ -1,5 +1,13 @@
 .mn-c-text-button {
 	display: flex;
-	direction: row;
+	flex-direction: row;
 }
 
+@media screen and (max-width: 500px) {
+	.mn-c-text-button {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 24px;
+	}
+}

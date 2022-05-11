@@ -1,4 +1,5 @@
 @use '../abstract/sizing' as *; 
+@use '../abstract/typography' as *; 
 @use '../abstract/color' as *;
 
 $textbox-width: 20 * $bs;
@@ -61,4 +62,35 @@ $textbox-width: 20 * $bs;
 		font-size: $bs - 3px;
 	}
 
+	&.mn-is-large {
+		input {
+			height: 3 * $bs;
+			font-size: 1.5 * $bs;
+		}
+
+	}
+
+	&.mn-is-light {
+		::placeholder {
+			color: $monablue-1;
+			opacity: 0.5;
+		}
+
+		input {
+			color: $monablue-1;
+			background-color: transparent;
+			&:focus {
+				outline: none;
+				border: 0px;
+				background-color: rgba($monablue-3, 1);
+			}
+			&:hover {
+				transition: 0.3s;
+				cursor: pointer;
+				background-color: rgba($monablue-3, 1);
+			}
+		}
+	}
 }
+
+

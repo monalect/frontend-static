@@ -1,7 +1,8 @@
 import {
 	MainHeader,
 	RegistrationForm,
-	NotifyMe
+	NotifyMe,
+	Meta
 } from "/components/";
 
 import  {
@@ -19,7 +20,6 @@ import {
 	ApolloProvider,
 } from "@apollo/client";
 
-import Head from 'next/head'
 
 const client = new ApolloClient({
 	uri: 'http://localhost:8000/graphql',
@@ -30,10 +30,10 @@ function Main()
 {
 	return (
 		<div id="landing" className="root">
-			<Head>
-				<title>Monalect - Online Courses You Create</title>
-				<meta name="viewport" content="initial-scale=1.0, width=device-width"/>
-			</Head>
+			<Meta
+				title="Monalect: Your personal course manager."
+				description="Create, share and study your own courses for free. Whether you're a student, researcher, or self-directed learner, we've got you covered."
+			/>
 			<MainHeader slug="/" />
 			<main>
 				<section id ="landing_banner">
@@ -47,8 +47,8 @@ function Main()
 					</div>
 				</section>
 				<article id="landing_body">
-					<h4 id="landing_description">Monalect is a self-learning management system meant to provide efficiency, structure, and direction to your self-learning experience.</h4>
-					<h4> Create your own courses, with your own material, and if you don't have the time, import courses from others. After that, all you have to do is study. </h4>
+					<h4 id="landing_description">Monalect is a course manager meant to provide efficiency, structure, and direction to your learning experience.</h4>
+					<h4> Create, study, and share your own courses, and if you don't have the time, import courses from others. It's a course manager made by you. </h4>
 					<h4> It's coming soon! </h4>
 					<NotifyMe />
 				</article>

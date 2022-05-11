@@ -1,5 +1,6 @@
 import {
 	MainHeader,
+	Meta
 } from "/components/";
 import {
 	Footer
@@ -15,6 +16,10 @@ export default function BlogPost ({content})
 	const blogBody = converter.makeHtml(content);
 	return (
 		<div id="vision" className="root">
+			<Meta
+				title="Our Vision Statement"
+				description="The vision statement for Monalect, the app and the organization."
+			/>
 			<MainHeader slug="/vision" />
 			<main id="vision_main">
 				<div id="banner">

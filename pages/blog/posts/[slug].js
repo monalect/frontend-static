@@ -6,6 +6,7 @@ import {
 
 import {
 	MainHeader,
+	Meta
 } from "/components/";
 
 import {
@@ -31,10 +32,10 @@ export default function BlogPost ({post})
 
 	return (
 		<div id="blog" className="root">
-			<Head>
-				<title>{post.title}</title>
-				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-			</Head>
+			<Meta
+				title={post.title}
+				description={post.description}
+			/>
 			<MainHeader slug="/blog" />
 			<main id="post">
 				<div id="banner">
@@ -67,6 +68,7 @@ export default function BlogPost ({post})
 export async function getStaticProps({params}) {
 	const post = getPostBySlug(params.slug, [
 		'title',
+		'description',
 		'date',
 		'author',
 		'words',

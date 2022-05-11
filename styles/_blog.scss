@@ -46,8 +46,11 @@
 
 .index {
 	background-color: rgba($monablue-3, 0.2);
-	min-width: 720px;
-	max-width: 820px; 
+	min-width: 250px;
+	width: 750px;
+	max-width: 90vw; 
+	display: flex;
+	flex-direction: column;
 	font-family: $font-sans;
 	font-weight: 300;
 	margin-bottom: 64px;
@@ -68,4 +71,9 @@
 }
 
 
+@media screen and (max-width: 500px) {
+	#blog_banner {
+		transform: scale(0.8);
+	}
+}
 

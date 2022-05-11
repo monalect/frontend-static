@@ -59,3 +59,58 @@
 	color: $monablue-1;
 	font-size: 24px;
 }
+
+@media screen and (max-width: 850px) {
+
+	#landing_banner {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 32px;
+		margin-top: 64px;
+
+		#banner_logo{
+			width: 150px;
+			height: auto;
+		}
+
+		#banner_text {
+			display: flex;
+			flex-direction: column;
+			font-family: $font-serif;
+			margin-bottom: 32px;
+			align-items: center;
+			justify-content: center;
+
+			#banner_title {
+				margin-bottom: 32px;
+				font-weight: 500;
+				font-size: 64px;
+			}
+			
+			#banner_subtitle {
+				width: 350px;
+				font-style: italic;	
+				color: $monablue-1-5;
+				text-align: center;
+				h4 {
+				font-size: 22px;
+				}
+			}
+		}
+	}
+
+}
+
+@media screen and (max-width: 500px) {
+
+	#landing_body {
+		> * {
+			max-width: 350px;
+			font-size: 22px;
+		}
+	}
+
+
+
+}

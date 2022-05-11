@@ -4,6 +4,8 @@ export default function TextInput({
 		name, 
 		id, 
 		type="text",
+		theme="",
+		size = "",
 		placeholder, 
 		minlength,
 		maxlength,
@@ -14,7 +16,7 @@ export default function TextInput({
 })
 {
 	return (
-		<div className="mn-c-text-input" >
+		<div className={`mn-c-text-input ${theme} ${size}`} >
 			<label htmlFor={name}>
 				<div> 
 					<span class="mn-c-label">{ label }</span>

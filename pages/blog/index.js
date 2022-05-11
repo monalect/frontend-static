@@ -1,5 +1,6 @@
 import {
 	MainHeader,
+	Meta
 } from "/components/";
 
 import {
@@ -23,6 +24,10 @@ export default function Blog({allMeta})
 
 	return  (
 		<div id="blog" className="root">
+			<Meta
+				title="Monablog: A blog for self-learners."
+				description="Posts on autodidaciticism, academia, and education. We speak on the importance of self-education, and strive to make the world more educated. "
+			/>
 			<MainHeader slug="/blog"/>
 			<main id="blog_index">
 				<div id="blog_banner">
