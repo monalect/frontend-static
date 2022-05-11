@@ -125,7 +125,10 @@
 		align-items: center;
 		.text {
 			height: 150px;
+			min-width: 80vw;
+			max-width: 90vw;
 		}
+
 		img {
 			width: auto;
 			max-width: 80vw;
